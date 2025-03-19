@@ -10,8 +10,8 @@ export default defineConfig({
   name: 'default',
   title: 'Showcase Workflow',
 
-  projectId: 'm2begyfh',
-  dataset: 'production-v3',
+  projectId: 'zupqbrei',
+  dataset: 'production',
 
   plugins: [
     deskTool(
