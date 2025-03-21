@@ -17,7 +17,7 @@ export default defineConfig({
   plugins: [
     deskTool(
       {structure}
-      ),
+    ),
     workflow({
       schemaTypes: [`post`, `product`],
     }),
@@ -27,4 +27,9 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
+  beta: {
+    create: {
+      fallbackStudioOrigin: 'custom-workflow.sanity.studio'
+    }
+  }
 })
