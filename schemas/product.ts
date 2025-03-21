@@ -19,11 +19,32 @@ export default defineType({
     defineField({
       name: 'image',
       type: 'image',
+      fields: [
+        defineField({
+          type: 'text',
+          name: 'promptForImage',
+          title: 'Image prompt',
+          rows: 2,
+          hidden: true
+        }),
+        defineField({
+          type: 'string',
+          name: 'alt',
+          title: 'Alt text',
+          hidden: true
+        }),
+      ],
+      options: {
+        aiAssist: {
+          imageInstructionField: 'promptForImage',
+          imageDescriptionField: 'alt',
+        },
+      },
     }),
     defineField({
       name: 'content',
       type: 'text',
-      rows: 3,
+      rows: 5,
     }),
   ],
   preview: {
